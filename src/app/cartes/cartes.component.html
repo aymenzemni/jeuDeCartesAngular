@@ -1,0 +1,40 @@
+<div class="container">
+
+    <div id="bg">
+
+        <div class="rowdisplay">
+
+            <div class="col-12 text-center jeuName"> Jeu de Cartes</div>
+        </div>
+
+        <div class="row rowCard">
+            <div *ngFor="let item of cartesNonTriee" class="imgTaille">
+
+                <img src="../../../../../../../../assets/images/{{item.couleur}}/{{item.valeur}}.jpg" style="width:100%">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-11 text-center">
+
+                <button type="button" class="btn btn-primary col-sm-11 col-md-2 mrgBtn" (click)="trieeCartes()" [hidden]="disableTriee">Triee les Cartes</button>
+
+                <button type="button" class="btn btn-primary col-sm-11 col-md-2 mrgBtn" (click)="newCartes()"> Lancer les Cartes</button>
+
+                <button type="button" class="btn btn-primary col-sm-11 col-md-2 mrgBtn" (click)="viderTable()" [hidden]="disableVider"> Vider la table</button>
+
+            </div>
+
+        </div>
+
+        <div class="row  rowCard" *ngIf="cartesTriee">
+            <div *ngFor="let item of cartesTriee" class="imgTaille">
+
+                <img src="../../../../../../../../assets/images/{{item.couleur}}/{{item.valeur}}.jpg" style="width:100%">
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
