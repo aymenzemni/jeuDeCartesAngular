@@ -10,12 +10,6 @@
     position: fixed;
 }
 
-#titleCards {
-    font-size: 3rem;
-    color: blue;
-    padding-left: 30%;
-}
-
 .cartesNnTriee {
     width: 100%;
     padding: 20px;

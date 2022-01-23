@@ -8,7 +8,6 @@ import { CartesService } from './cartes.service';
 })
 export class CartesComponent implements OnInit {
 
-  loading;
   cartesNonTriee: any = [];
   cartesTriee: any = [];
   disableTriee = true;
@@ -16,14 +15,11 @@ export class CartesComponent implements OnInit {
   constructor(private cartesService: CartesService) { }
 
   ngOnInit(): void {
-    this.loading = true;
-   // this.getCartes();
   }
 
   getCartes() {
     this.cartesService.getCartes().subscribe(
       data => {
-        this.loading = false;
         this.cartesNonTriee = data;
       }
     );
